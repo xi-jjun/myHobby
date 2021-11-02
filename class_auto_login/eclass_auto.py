@@ -1,5 +1,5 @@
 import pyautogui as pg
-from selenium import webdriver 
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -23,7 +23,7 @@ print('현재 페이지에 frame은 %d개가 있습니다.' % len(iframes))
 def killPopUp(frame1, frame2, _xpath_):
     # kill popup window by using selenium!! sibal
     driver.switch_to.default_content()
-    driver.switch_to.frame(driver.find_element_by_xpath(frame1)) # frame # we have to refer frame - iframe 
+    driver.switch_to.frame(driver.find_element_by_xpath(frame1)) # frame # we have to refer frame - iframe
     driver.switch_to.frame(driver.find_element_by_xpath(frame2)) # iframe
     popupkill = driver.find_element_by_xpath(_xpath_)
     popupkill.click()
@@ -39,7 +39,7 @@ except:
 # click red button for sending ID and PW
 try:
     driver.switch_to.default_content()
-    driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame')) # frame # we have to refer frame - iframe 
+    driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame')) # frame # we have to refer frame - iframe
 
     login_click = driver.find_element_by_xpath('//*[@id="header"]/div[1]/div/ul/li[1]/a')
     login_click.click()
@@ -50,10 +50,10 @@ except:
 try:
     time.sleep(1)
     driver.switch_to.default_content()
-    driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame')) # frame # we have to refer frame - iframe 
+    driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame')) # frame # we have to refer frame - iframe
 
-    login_ID = '2016111952'
-    login_PW = '69dvlih32xz@@#!$'
+    login_ID = 'YOUR ID'
+    login_PW = 'YOUR PASSWORD'
 
     elem = driver.find_element_by_xpath('//*[@id="id"]')
     elem.send_keys(login_ID)
@@ -80,8 +80,8 @@ except:
 # click Class '오픈소스소프트웨어실습'
 try:
     driver.switch_to.default_content()
-    # 오픈소스소프트웨어실습 
-    # //*[@id="mCSB_1_container"]/ul/li[1]/a/span[2]/button 
+    # 오픈소스소프트웨어실습
+    # //*[@id="mCSB_1_container"]/ul/li[1]/a/span[2]/button
     driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame'))
     eas2 = driver.find_element_by_xpath('//*[@id="mCSB_1_container"]/ul/li[2]/a/span[2]/button')
     eas2.click()
@@ -105,14 +105,14 @@ try:
         try:
             driver.switch_to.default_content()
             # 오픈소스소프트웨어실습 2번째 X Path
-            # //*[@id="listBox"]/table/tbody/tr[1]/td[2]/div[2]/ul[3]/li/a  
+            # //*[@id="listBox"]/table/tbody/tr[1]/td[2]/div[2]/ul[3]/li/a
             driver.switch_to.frame(driver.find_element_by_xpath('/html/frameset/frame'))
             osw = driver.find_element_by_xpath('//*[@id="listBox"]/table/tbody/tr[1]/td[2]/div[2]/ul[3]/li/a')
             osw.click()
             print("오픈소스소프트웨어실습 -- 2")
         except:
             pass
-    
+
 except:
     pass
 
@@ -132,7 +132,7 @@ time.sleep(5)
 # try:
 #     # driver.get("https://dongguk.webex.com/webappng/sites/dongguk/meeting/info/39c7ae6dcd4eb9fa55538a4a3d837966")
 #     driver.switch_to.default_content()
-#     # EAS2 
+#     # EAS2
 #     eas2_1 = driver.find_element_by_xpath('//*[@id="smartJoinButton"]/span')
 #     eas2_1.click()
 # except:
@@ -148,9 +148,9 @@ def button_click(img_path):
             pg.click(point.x, point.y)
             ok = False
         except:
-            if time.time()-t > 6: 
+            if time.time()-t > 6:
                 ok = False
-            
+
 
 # # click meeting join-1
 # button5location = pg.locateOnScreen('/home/xi-jjun/ex_workplace/D-Coder/class_auto_login/Configuration/join_meeting.png')
@@ -201,7 +201,7 @@ pg.click()
 # try:
 #     driver.switch_to.default_content()
 #     driver.switch_to.frame(driver.find_element_by_xpath('//*[@id="pbui_iframe"]'))
-    
+
 #     # EAS2
 #     eas2_1 = driver.find_element_by_xpath('//*[@id="interstitial_join_btn"]')
 #     eas2_1.click()
@@ -213,4 +213,3 @@ pg.click()
 
 # def frame_2_(frame_name):
 #     pass
-
